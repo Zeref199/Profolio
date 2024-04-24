@@ -1,0 +1,47 @@
+.light-theme {
+    background-color: #ffffff; /* Set light background color */
+    color: #000000; /* Set light text color */
+    /* Add any other light theme styles here */
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    background-color: #252525; /* Set dark background color */
+    color: #ffffff; /* Set dark text color */
+    /* Add any other dark theme styles here */
+  }
+
+  .light-theme a {
+    color: #000000; /* Set white text color for anchor elements in dark mode */
+  }
+
+  /* Hover Effect */
+.nav-link:hover {
+    color: #ff6347; /* Tomato */
+  }
+  
+  /* Active Link */
+  .nav-link.active {
+    color: #008080; /* Teal */
+    border-bottom: 2px solid #008080; /* Teal */
+  }
+  
+  /* Transition Effect */
+  .nav-link {
+    transition: color 0.5s ease;
+  }
+
+  /* Active Link for Light Theme */
+.light-theme .nav-link.active {
+    color: #008080; /* Teal */
+    border-bottom: 2px solid #2249b4; /* Teal */
+  }
+  
+  /* Active Link for Dark Theme */
+  .dark-theme .nav-link.active {
+    color: #ff6347; /* Tomato */
+    border-bottom: 2px solid #bb1c00; /* Tomato */
+  }
+
+
+

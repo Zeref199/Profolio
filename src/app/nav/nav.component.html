@@ -1,0 +1,20 @@
+<div [ngClass]="{ 'light-theme': !isDarkTheme(), 'dark-theme': isDarkTheme() }">
+    <nav class="navbar-expand-md border-bottom mb-3">
+        <div class="container">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="isActive('/home')" routerLink="/home" [ngClass]="{ 'text-light': isDarkTheme() }">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="isActive('/portfolio')" routerLink="/portfolio" [ngClass]="{ 'text-light': isDarkTheme() }">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="isActive('/resume')" routerLink="/resume" [ngClass]="{ 'text-light': isDarkTheme() }">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="isActive('/contact')" routerLink="/contact" [ngClass]="{ 'text-light': isDarkTheme() }">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

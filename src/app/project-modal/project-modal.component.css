@@ -1,0 +1,13 @@
+/* Light Theme */
+.light-theme {
+    background-color: #ffffff; /* Set light background color */
+    color: #000000; /* Set light text color */
+    /* Add any other light theme styles here */
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    background-color: #ffffff; /* Set dark background color */
+    color: #000000; /* Set dark text color */
+    /* Add any other dark theme styles here */
+  }

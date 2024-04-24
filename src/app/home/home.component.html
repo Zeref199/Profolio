@@ -1,0 +1,42 @@
+<div [ngClass]="{ 'light-theme': currentTheme === 'light', 'dark-theme': currentTheme === 'dark' }">
+<div class="container">
+    <div class="row">
+        <!--About me-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="https://shopoume.s3.eu-north-1.amazonaws.com/Profolio/OtmaneProfolio2.0.jpg" alt="profile picture" width="300" height="350" class="rounded-circle">
+                <p style="padding-top: 5%;">   Hello World! I'm Arsalane Otmane, a passionate Software Engineering student who loves turning ideas into reality. 
+                    My journey in the tech world started when I wrote my first line of code in high school, and I've been hooked ever since.
+
+                    I'm currently pursuing my degree in Software Engineering, where I've had the opportunity to deepen my understanding of algorithms, data structures, and software design principles. 
+                    I'm particularly interested in Spring And Angular, and I enjoy exploring new technologies and tools in this area.
+
+                    When I'm not coding, you can find me immersed in the world of game development (wich is still coding 😊), fostering my creativity and keeping my inspiration ignited. 
+                    I believe that the best software solutions come from a blend of technical knowledge and out-of-the-box thinking, and I strive to bring this perspective to all my projects.
+
+                    I'm always looking for new challenges and opportunities to grow. Feel free to reach out if you'd like to collaborate or just chat about tech!
+                </p>
+                    
+            </div>
+        </div>
+
+        <!--Featured Project-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+
+            <carousel >
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit the Portfolio section to learn more!</p>
+        </div>
+    </div>
+</div>
+</div>
