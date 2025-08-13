@@ -1,203 +1,342 @@
 <div class="container text-center">
-    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
-    <div class="pb-2">
-        <accordion [isAnimated]="true" class="shadow">
-            <accordion-group [(isOpen)]="isWorkExperienceOpen">
-                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-                    <div style="visibility: hidden;">></div>
-                    <div class="btn-link">Work Experience</div>
+  <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">
+    Download PDF Resume
+  </button>
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+      <accordion-group [(isOpen)]="isWorkExperienceOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Work Experience</div>
 
-                    <div style="width: 10.95px;">
-                        <div *ngIf="!isWorkExperienceOpen" style="color: white;">></div>
-                        <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
-                    </div>
-                </button>
+          <div style="width: 10.95px">
+            <div *ngIf="!isWorkExperienceOpen" style="color: white">></div>
+            <div *ngIf="isWorkExperienceOpen" style="color: white">v</div>
+          </div>
+        </button>
 
-            </accordion-group>
+        <div style="text-align: left">
+          <h3 class="mb-0">Software Engineer Intern</h3>
+          <h4 class="text-primary">
+            Cegedim Maroc, Rabat (Mar 2025 – Aug 2025)
+          </h4>
+          <ul>
+            <li>
+              Designed and implemented a complete observability solution for a
+              critical payment service.
+            </li>
+            <li>
+              Integrated event-driven workflows and real-time monitoring
+              dashboards.
+            </li>
+            <li>
+              Enhanced incident detection and resolution efficiency for
+              production systems.
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div style="text-align: left">
+          <h3 class="mb-0">Software Developer Intern</h3>
+          <h4 class="text-primary">
+            Cegedim Maroc, Rabat (Jun 2024 – Oct 2024)
+          </h4>
+          <ul>
+            <li>
+              Built a modular, reusable email management application for
+              internal teams.
+            </li>
+            <li>
+              Applied clean architecture principles for scalability and
+              maintainability.
+            </li>
+            <li>
+              Collaborated closely with cross-functional teams to deliver on
+              time and within scope.
+            </li>
+          </ul>
+        </div>
+      </accordion-group>
 
-            <accordion-group [(isOpen)]="isEducationOpen">
-                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-                    <div style="visibility: hidden;">></div>
-                    <div class="btn-link">Education</div>
+      <accordion-group [(isOpen)]="isEducationOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Education</div>
 
-                    <div style="width: 10.95px;">
-                        <div *ngIf="!isEducationOpen" style="color: white;">></div>
-                        <div *ngIf="isEducationOpen" style="color: white;">v</div>
-                    </div>
-                </button>
-                <div style="text-align: left;">
-                    <h3 class="mb-0">BACCALAURÉAT</h3>
-                    <h4 class="text-primary">Moulay Youssef, Rabat</h4>
-                    <ul>
-                        <li>Graduated from Moulay Youssef in 2018</li>
-                        <li>Science Mathématique b</li>
-                    </ul>
-                </div>
-                <hr>
+          <div style="width: 10.95px">
+            <div *ngIf="!isEducationOpen" style="color: white">></div>
+            <div *ngIf="isEducationOpen" style="color: white">v</div>
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h3 class="mb-0">BACCALAURÉAT</h3>
+          <h4 class="text-primary">Moulay Youssef, Rabat</h4>
+          <ul>
+            <li>Graduated from Moulay Youssef in 2018</li>
+            <li>Science Mathématique b</li>
+          </ul>
+        </div>
+        <hr />
 
-                <div style="text-align: left;">
-                    <h3 class="mb-0">LICENCE</h3>
-                    <h4 class="text-primary">Faculte Des Science Rabat</h4>
-                    <ul>
-                        <li>Graduated from Faculte Des Science Rabat in 2023</li>
-                        <li>SCIENCES MATHÉMATIQUES ET INFORMATIQUE</li>
-                    </ul>
-                </div>
-                <hr>
+        <div style="text-align: left">
+          <h3 class="mb-0">LICENCE</h3>
+          <h4 class="text-primary">Faculte Des Science Rabat</h4>
+          <ul>
+            <li>Graduated from Faculte Des Science Rabat in 2023</li>
+            <li>SCIENCES MATHÉMATIQUES ET INFORMATIQUE</li>
+          </ul>
+        </div>
+        <hr />
 
-                <div style="text-align: left;">
-                    <h3 class="mb-0">Diplome d'Ingenieur</h3>
-                    <h4 class="text-primary">Hightech, Rabat</h4>
-                    <ul>
-                        <li>Expected to graduated from Hightech Rabat in 2025</li>
-                        <li>Conception et developpement en Génie logiciel</li>
-                    </ul>
-                </div>
+        <div style="text-align: left">
+          <h3 class="mb-0">Diplome d'Ingenieur</h3>
+          <h4 class="text-primary">Hightech, Rabat</h4>
+          <ul>
+            <li>Expected to graduated from Hightech Rabat in 2025</li>
+            <li>Conception et developpement en Génie logiciel</li>
+          </ul>
+        </div>
+      </accordion-group>
 
-            </accordion-group>
+      <accordion-group [(isOpen)]="isCertificationOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Certifications</div>
 
-            <accordion-group [(isOpen)]="isCertificationOpen">
-                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-                    <div style="visibility: hidden;">></div>
-                    <div class="btn-link">Certifications</div>
+          <div style="width: 10.95px">
+            <div *ngIf="!isCertificationOpen" style="color: white">></div>
+            <div *ngIf="isCertificationOpen" style="color: white">v</div>
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h4>Programmez en orienté objet avec C++</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/1886884628"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Java Spring Boot E-Commerce Ultimate Course</h4>
+          <ul>
+            <li>Udemy</li>
+            <li>
+              you can find it
+              <a
+                href="https://www.udemy.com/certificate/UC-c98fa4f5-f9c9-4bc3-99cb-154d74835c3b/"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Gérez du code avec Git et GitHub</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/1673895545"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Apprenez la programmation orientée objet avec Python</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/4540824651"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Débutez avec Angular</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/8241520849"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Apprenez à programmer en C#</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/1951937801"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Apprenez à programmer en Java</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/1611736514"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games</h4>
+          <ul>
+            <li>Udemy</li>
+            <li>
+              you can find it
+              <a
+                href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7c4d76b6-f12a-47bb-bc59-5517699f86dd.pdf"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Programmez en orienté objet avec C++</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/1886884628"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Concevez votre site web avec PHP et MySQL</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/7836076381"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+          <hr />
+          <h4>Reprenez le contrôle à l'aide de Linux !</h4>
+          <ul>
+            <li>OpenClassrooms</li>
+            <li>
+              you can find it
+              <a
+                href="https://openclassrooms.com/fr/course-certificates/7394714651"
+                target="_blank"
+                >here</a
+              >
+            </li>
+          </ul>
+        </div>
+      </accordion-group>
 
-                    <div style="width: 10.95px;">
-                        <div *ngIf="!isCertificationOpen" style="color: white;">></div>
-                        <div *ngIf="isCertificationOpen" style="color: white;">v</div>
-                    </div>
-                </button>
-                <div style="text-align: left;">
-                    <h4>Programmez en orienté objet avec C++</h4>
-                    <ul>
-                        <li>OpenClassrooms </li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/1886884628" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Java Spring Boot E-Commerce Ultimate Course</h4>
-                    <ul>
-                        <li>Udemy</li>
-                        <li>you can find it  <a href="https://www.udemy.com/certificate/UC-c98fa4f5-f9c9-4bc3-99cb-154d74835c3b/" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Gérez du code avec Git et GitHub</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/1673895545" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Apprenez la programmation orientée objet avec Python</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/4540824651" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Débutez avec Angular</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/8241520849" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Apprenez à programmer en C#</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/1951937801" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Apprenez à programmer en Java</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/1611736514" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games</h4>
-                    <ul>
-                        <li>Udemy</li>
-                        <li>you can find it  <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7c4d76b6-f12a-47bb-bc59-5517699f86dd.pdf" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Programmez en orienté objet avec C++</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/1886884628" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Concevez votre site web avec PHP et MySQL</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/7836076381" target="_blank">here</a></li>
-                    </ul>
-                    <hr>
-                    <h4>Reprenez le contrôle à l'aide de Linux !</h4>
-                    <ul>
-                        <li>OpenClassrooms</li>
-                        <li>you can find it  <a href="https://openclassrooms.com/fr/course-certificates/7394714651" target="_blank">here</a></li>
-                    </ul>
-                </div>
+      <accordion-group [(isOpen)]="isSkillsOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Skills</div>
 
-            </accordion-group>
-
-            <accordion-group [(isOpen)]="isSkillsOpen">
-                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-                    <div style="visibility: hidden;">></div>
-                    <div class="btn-link">Skills</div>
-
-                    <div style="width: 10.95px;">
-                        <div *ngIf="!isSkillsOpen" style="color: white;">></div>
-                        <div *ngIf="isSkillsOpen" style="color: white;">v</div>
-                    </div>
-                </button>
-                <div class="row" style="text-align: left;">
-                    <div class="col">
-                        <h3>Programming Languages:</h3>
-                        <ul>
-                            <li>C</li>
-                            <li>C#</li>
-                            <li>C++</li>
-                            <li>Java</li>
-                            <li>php</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>DataBase:</h3>
-                        <ul>
-                            <li>MySql</li>
-                            <li>Oracl</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Frameworks:</h3>
-                        <ul>
-                            <li>Angular</li>
-                            <li>Spring</li>
-                            <li>.NET</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Tools:</h3>
-                        <ul>
-                            <li>Intellij</li>
-                            <li>Eclipse</li>
-                            <li>linux</li>
-                            <li>Postman</li>
-                            <li>Swagger</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Other Skills:</h3>
-                        <ul>
-                            <li>Management</li>
-                            <li>Finance</li>
-                            <li>Source Control via Git</li>
-                            <li>MVC Architecture</li>
-                            <li>Agile Developement</li>
-                        </ul>
-                    </div>
-                </div>
-            </accordion-group>
-
-        </accordion>
-    </div>
+          <div style="width: 10.95px">
+            <div *ngIf="!isSkillsOpen" style="color: white">></div>
+            <div *ngIf="isSkillsOpen" style="color: white">v</div>
+          </div>
+        </button>
+        <div class="row" style="text-align: left">
+          <div class="col">
+            <h3>Programming Languages:</h3>
+            <ul>
+              <li>C</li>
+              <li>C#</li>
+              <li>C++</li>
+              <li>Java</li>
+              <li>php</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>DataBase:</h3>
+            <ul>
+              <li>MySql</li>
+              <li>Oracl</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>OpenSearch</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Frameworks:</h3>
+            <ul>
+              <li>Angular</li>
+              <li>Spring</li>
+              <li>.NET</li>
+              <li>React</li>
+              <li>symfony</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Tools:</h3>
+            <ul>
+              <li>Intellij</li>
+              <li>Eclipse</li>
+              <li>linux</li>
+              <li>Postman</li>
+              <li>Swagger</li>
+              <li>GitHub</li>
+              <li>GitLab</li>
+              <li>Docker</li>
+              <li>Jira</li>
+              <li>Kafka</li>
+              <li>Kubernetes</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Other Skills:</h3>
+            <ul>
+              <li>Management</li>
+              <li>Finance</li>
+              <li>Source Control via Git</li>
+              <li>MVC Architecture</li>
+              <li>Agile Developement</li>
+            </ul>
+          </div>
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
 </div>
