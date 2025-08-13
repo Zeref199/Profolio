@@ -21,11 +21,16 @@ jobs:
 
       - run: npm ci
 
+      # IMPORTANT: base-href must match your repo name (case sensitive)
       - run: npm run build -- --configuration production --base-href "/Profolio/"
 
+      # SPA fallback for Angular router refreshes
+      - run: cp docs/index.html docs/404.html
+
+      # <<< This must match your outputPath (docs) >>>
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/Profolio
+          path: docs
 
   deploy:
     needs: build
